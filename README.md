@@ -1,6 +1,5 @@
 <h1>Fixify.in</h1><br>
 <h3>Website Files</h3>
-<hr>
 Steps to run the website:
 <ul>
 <li>Download and extract the zip</li>
