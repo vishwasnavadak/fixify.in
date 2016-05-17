@@ -18,7 +18,7 @@
       <a class="navbar-brand" href="#"><img src="img/fixify.png" alt="logo"></a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">LOGIN</a></li>
+      <li><a href="login">LOGIN</a></li>
       <li><a href="#">PARTNERS</a></li>
       <li><a href="#">ABOUT US</a></li>
     </ul>
@@ -49,22 +49,28 @@
   </div>
 </div>
 <div id="section1">
-  <div id="section1Inner" class="container-fluid">
+  <div id="section1Inner" class="container">
     <div class="row">
       <div class="col-sm-4">
-        <img src="img/bulb.png" alt="innovation" >
-        <h2>INNOVATION</h2>
-        <p>We see the world differently. We aim higher, dream bigger and explore further. We try to make everything 10x better than anything ever done before.</p>
+        <div class="innerWrapper">
+          <img src="img/bulb.png" alt="innovation" >
+          <h2>INNOVATION</h2>
+          <p>We see the world differently. We aim higher, dream bigger and explore further. We try to make everything 10x better than anything ever done before.</p>
+        </div>
       </div>
       <div class="col-sm-4">
-        <img src="img/growth.png" alt="growth" >
-        <h2>GROWTH</h2>
-        <p>We solve problems differently. We combine knowledge, passion and technology to drive innovation and set new benchmarks for excellence.</p>
+        <div class="innerWrapper">
+          <img src="img/growth.png" alt="growth" >
+          <h2>GROWTH</h2>
+          <p>We solve problems differently. We combine knowledge, passion and technology to drive innovation and set new benchmarks for excellence.</p>
+        </div>
       </div>
       <div class="col-sm-4">
-        <img src="img/online.png" alt="online" >
-        <h2>TECHNOLOGY</h2>
-        <p>We do things differently. We don’t stop at success, we always ask ‘what next?’ so we can change the game and keep on winning.</p>
+        <div class="innerWrapper">
+          <img src="img/online.png" alt="online" >
+          <h2>TECHNOLOGY</h2>
+          <p>We do things differently. We don’t stop at success, we always ask ‘what next?’ so we can change the game and keep on winning. Yes that's it.. We win.. Always win</p>
+        </div>
       </div>
     </div>
   </div>
