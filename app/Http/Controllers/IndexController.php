@@ -19,4 +19,7 @@ class IndexController extends Controller {
       'complaint' => $complaint
     ]);
   }
+  public function me(Request $req) {
+    return $req->session()->get('user');
+  }
 }

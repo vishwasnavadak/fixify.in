@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIssuesTable extends Migration
+class CreateLaptopBrandsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateIssuesTable extends Migration
      */
     public function up()
     {
-        Schema::create('issues', function (Blueprint $table) {
+        Schema::create('laptop_brands', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 64);
-            $table->text('descr');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +26,6 @@ class CreateIssuesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('issues');
+        Schema::drop('laptop_brands');
     }
 }

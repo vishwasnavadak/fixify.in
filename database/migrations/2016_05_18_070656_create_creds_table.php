@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCentersTable extends Migration
+class CreateCredsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateCentersTable extends Migration
      */
     public function up()
     {
-        Schema::create('centers', function (Blueprint $table) {
+        Schema::create('creds', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100);
-            $table->string('place', 100);
-            $table->string('owner', 100);
-            $table->string('phone', 10);
+            $table->integer('userId')->unsigned();
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade');
+            $table->string('passwd', 64);
+            $table->timestamps();
         });
     }
 
@@ -28,6 +28,6 @@ class CreateCentersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('centers');
+        Schema::drop('creds');
     }
 }

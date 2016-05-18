@@ -17,17 +17,17 @@
 					<h2><i class="glyphicon glyphicon-log-in"></i> Login to Fixify</h2>
           <div class="row form-group">
             <div class="col-sm-6">
-              <a href="#" class="btn btn-primary form-control">Facebook</a>
+              <a href="social/redirect/facebook" class="btn btn-primary form-control">Facebook</a>
             </div>
             <div class="col-sm-6">
-              <a href="#" class="btn btn-danger form-control">Google</a>
+              <a href="social/redirect/google" class="btn btn-danger form-control">Google</a>
             </div>
           </div>
           <center><h3>---------- OR ----------</h3></center>
 					<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="user/login">
             {{ csrf_field() }}
 						<div class="form-group ">
-							<input type="text" class="form-control" name="login" placeholder="Email"/>
+							<input type="text" class="form-control" name="email" placeholder="Email"/>
 						</div>
 						<div class="form-group ">
 								<input type="password" class="form-control" name="passwd" placeholder="Password">
