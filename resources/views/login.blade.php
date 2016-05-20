@@ -16,7 +16,7 @@
 			</ul>
 			<div class="tab-content tabs-login col-lg-12 col-md-12 col-sm-12 cols-xs-12">
 				<div id="login" class="tab-pane fade active in">
-					<h2><i class="glyphicon glyphicon-log-in"></i> Login to Fixify</h2>
+					<h2><i class="fa fa-sign-in"></i> Login to Fixify</h2>
           <div class="row form-group">
             <div class="col-sm-6">
               <a href="social/redirect/facebook" class="btn form-control social fb">
@@ -46,6 +46,7 @@
 					</form>
 				</div>
         <div id="register" class="tab-pane fade active in">
+<<<<<<< HEAD
 					<h2><i class="glyphicon glyphicon-log-in"></i> Register to Fixify</h2>
 					<form method="post" onsubmit="return validate()" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="user/register">
             {{ csrf_field() }}
@@ -58,6 +59,14 @@
                   <input type="text" class="form-control" name="lName" placeholder="Second Name">
                 </div>
 							</div>
+=======
+					<h2><i class="fa fa-sign-in"></i> Register to Fixify</h2>
+					<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="user/register">
+						<div class="form-group ">
+							<label for="login" class="sr-only">Name</label>
+								<input type="text" class="form-control" name="login" id="login_value"
+									placeholder="Name" tabindex="1" value="" />
+>>>>>>> a173ce4ffe4b7b84316d252004e4006fe4184841
 						</div>
 						<div class="input-group form-group">
 							<span class="input-group-addon"><i class="fa fa-phone"></i></span>
