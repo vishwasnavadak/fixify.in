@@ -4,16 +4,17 @@ body, html {
   margin: 0;
   padding: 0;
   text-align: center;
+  font-family: 'Abel', sans-serif;
 }
 nav.navbar a {
-  color: whitesmoke;
+  color: black;
   font-size: 13px;
   padding-left: 25px;
   padding-right: 25px;
 }
 nav.navbar a:hover, nav.navbar a:focus, nav.navbar a:active {
   background: transparent;
-  color: white;
+  color: black;
 }
 a.navbar-brand img {
   width: 250px;
@@ -21,6 +22,8 @@ a.navbar-brand img {
   margin-right: 100px;
 }
 .navbar {
+  background:white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
   z-index: 10000;
   top: 0;
 }
@@ -32,32 +35,11 @@ a.navbar-brand img {
   height: 45px;
   background-image: -webkit-linear-gradient(top,rgba(0,0,0,.3) 0,rgba(0,0,0,0) 100%);
 }
-/*Border around the body*/
-#top, #bottom, #left, #right {
-	background: black;
-	position: fixed;
-  z-index: 10000;
-}
-#left, #right {
-	top: 0;
-  bottom: 0;
-	width: 3px;
-}
-#left { left: 0; }
-#right { right: 0; }
-#top, #bottom {
-	left: 0;
-  right: 0;
-	height: 3px;
-}
-#top { top: 0; }
-#bottom { bottom: 0; }
+/* I removed the border around the body -kVn */
 /*Body border end*/
 #heroWrapper {
   background: #2196F3;
   width: 100%;
-  border-bottom-left-radius: 50% 100px;
-  border-bottom-right-radius: 50% 100px;
   top: 0;
   text-align: center;
   z-index: 10;
@@ -65,8 +47,6 @@ a.navbar-brand img {
 }
 #heroInner {
   height: 168px;
-  border-bottom-left-radius: 50% 100px;
-  border-bottom-right-radius: 50% 100px;
 }
 #heroInner img {
   margin-left: auto;
@@ -89,6 +69,8 @@ a.navbar-brand img {
   background-color: whitesmoke;
   width: 100%;
   position: absolute;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 #section1Inner {
   margin-top: 404px;
@@ -135,7 +117,7 @@ box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
   color: white;
   font-size: x-large;
   font-weight: 800;
-  margin: 50px 0 15px 0;
+  margin: 80px 0 20px 0;
 }
 #search input {
   display: inline;
@@ -156,11 +138,26 @@ box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
   height: 48px;
   box-shadow: 0 10px 12px 0 rgba(0,0,0,.1);
 }
+.hidden-search input {
+  display: inline;
+  width: 500px;
+  height: 30px;
+  margin-right: -5px;
+  border: none;
+  border-radius: 0px 0 0 0px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+.hidden-search button {
+  border: none;
+  border-radius: 0px 0 0 0px;
+  background-color: transparent;
+  color: black;
+  height: 30px;
+}
 #about {
   margin-top: 100px;
   padding-top: 200px;
-  border-top-left-radius: 50% 100px;
-  border-top-right-radius: 50% 100px;
 }
 #vision h4 {
   font-size: xx-large;
@@ -224,4 +221,14 @@ box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
   display: block;
   width: 100px;
   margin-left: 30px;
+}
+.footer-copy{
+    background:whitesmoke;
+    color:black;
+    position:absolute;
+    width:100%;
+    height:40px;
+    margin:0;
+    text-align:center;
+    z-index: 6464621646455;
 }
