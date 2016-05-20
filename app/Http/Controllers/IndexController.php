@@ -19,4 +19,10 @@ class IndexController extends Controller {
       'complaint' => $complaint
     ]);
   }
+  public function me(Request $req) {
+    return view('profile')->with([
+      'title' => 'Profile',
+      'user' => $req->session()->get('user')
+    ]);
+  }
 }

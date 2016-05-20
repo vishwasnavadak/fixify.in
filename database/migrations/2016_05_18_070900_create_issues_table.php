@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLaptopBrandsTable extends Migration
+class CreateIssuesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,12 @@ class CreateLaptopBrandsTable extends Migration
      */
     public function up()
     {
-        Schema::create('laptop_brands', function (Blueprint $table) {
+        Schema::create('issues', function (Blueprint $table) {
+          $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name', 64);
+            $table->text('descr');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +28,6 @@ class CreateLaptopBrandsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('laptop_brands');
+        Schema::drop('issues');
     }
 }

@@ -16,3 +16,7 @@ Route::get('login', 'IndexController@login');
 Route::post('user/login', 'AuthController@login');
 Route::post('user/register', 'AuthController@register');
 Route::get('complaint', 'IndexController@complaint')->middleware('login');
+Route::get('social/redirect/{provider}', 'AuthController@socialRedirect');
+Route::get('social/handle/{provider}', 'AuthController@socialHandle');
+Route::get('me', ['as' => 'profile', 'uses' => 'IndexController@me'])->middleware('login');
+Route::get('logout', 'AuthController@logout');
