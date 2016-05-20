@@ -30,6 +30,7 @@
     </ul>
   </div>
 </nav>
+
 <div id="heroWrapper">
   <div id="typing">
     <span id="caption"></span>
@@ -53,8 +54,12 @@
     </div>
   </div>
 </div>
-<div id="section1">
-  <div id="section1Inner" class="container">
+<div  class="container-fluid">
+    <div id="services">
+  <div id="section1Inner" >
+      <div class="col-sm-12">
+          <h1 class="section-header text-center">Why Fixify ?<hr width="35%"/></h1>
+      </div>
     <div class="row">
       <div class="col-sm-4">
         <div class="innerWrapper">
@@ -79,13 +84,47 @@
       </div>
     </div>
   </div>
-  <div id="about" class="us">
-    <h2>ABOUT US</h2>
-    <div id="vision">
-      <h4>We at fixify are aiming to change the world from a more complicated and entangled life to a simplified one. We’re part of your community, so we really care about your computer productivity and happiness.</h4>
+</div>
+<div id="about" >
+  <div id="section1Inner">
+      <div class="col-sm-12">
+          <h1 class="section-header text-center">About Us<hr width="35%" color=""/></h1>
+      </div>
+    <div class="row">
+     <p>
+         We at fixify are aiming to change the world from a more complicated and entangled life to a simplified one. We’re part of your community, so we really care about your computer productivity and happiness.
+     </p>
     </div>
   </div>
 </div>
+<div id="howitworks" >
+  <div id="section1Inner">
+      <div class="col-sm-12">
+          <h1 class="section-header text-center">How it works ?<hr width="35%"/></h1>
+      </div>
+    <div class="row">
+     lkihgvirinurvpiurhiguhrpgihrviuhirrg
+    </div>
+  </div>
+</div>
+<div id="whatweserve" >
+      <div class="col-sm-12">
+          <h1 class="section-header text-center">What we service ?<hr width="35%"/></h1>
+      </div>
+    <div class="row">
+        <div class="col-sm-3"><img src="img/companyLogo.png" alt=""></div>
+        <div class="col-sm-3"><img src="img/companyLogo.png" alt=""></div>
+        <div class="col-sm-3"><img src="img/companyLogo.png" alt=""></div>
+        <div class="col-sm-3"><img src="img/companyLogo.png" alt=""></div>
+    </div>
+</div>
+<div class="footer">
+    <p class="text-center">
+        <i class="fa fa-copyright"></i> Fixify India 2016. All lefts reserved.
+    </p>
+</div>
+</div>
+
 
 <form action="index.html" method="post">
   <input type="hidden" name="complaint">
