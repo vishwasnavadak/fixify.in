@@ -14,7 +14,7 @@
 			</ul>
 			<div class="tab-content tabs-login col-lg-12 col-md-12 col-sm-12 cols-xs-12">
 				<div id="login" class="tab-pane fade active in">
-					<h2><i class="glyphicon glyphicon-log-in"></i> Login to Fixify</h2>
+					<h2><i class="fa fa-sign-in"></i> Login to Fixify</h2>
           <div class="row form-group">
             <div class="col-sm-6">
               <a href="#" class="btn btn-primary form-control">Facebook</a>
@@ -38,7 +38,7 @@
 					</form>
 				</div>
         <div id="register" class="tab-pane fade active in">
-					<h2><i class="glyphicon glyphicon-log-in"></i> Register to Fixify</h2>
+					<h2><i class="fa fa-sign-in"></i> Register to Fixify</h2>
 					<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="user/register">
 						<div class="form-group ">
 							<label for="login" class="sr-only">Name</label>
