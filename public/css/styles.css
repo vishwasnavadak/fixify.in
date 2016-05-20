@@ -5,6 +5,7 @@ body, html {
   padding: 0;
   text-align: center;
   font-family: 'Abel', sans-serif;
+  font-size: 18px;
 }
 nav.navbar a {
   color: black;
@@ -26,6 +27,8 @@ a.navbar-brand img {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
   z-index: 10000;
   top: 0;
+  height:60px;
+  padding:5px;
 }
 .carousel-inner {
   margin-top: 50px;
@@ -35,7 +38,6 @@ a.navbar-brand img {
   height: 45px;
   background-image: -webkit-linear-gradient(top,rgba(0,0,0,.3) 0,rgba(0,0,0,0) 100%);
 }
-/* I removed the border around the body -kVn */
 /*Body border end*/
 #heroWrapper {
   background: #2196F3;
@@ -43,7 +45,10 @@ a.navbar-brand img {
   top: 0;
   text-align: center;
   z-index: 10;
-  position:absolute;
+  position:relative;
+  display: block;
+  margin-top:-20px;
+  padding:10px;
 }
 #heroInner {
   height: 168px;
@@ -65,15 +70,19 @@ a.navbar-brand img {
   left: 0;
   transform: translate3d(0, 0, 10);
 }
-#section1 {
+#services,#about,#howitworks,#whatweserve {
   background-color: whitesmoke;
   width: 100%;
-  position: absolute;
-  margin-top: 50px;
-  margin-bottom: 50px;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow:hidden;
+}
+.section-header hr{
+    border-bottom: 1px #616161 solid;
 }
 #section1Inner {
-  margin-top: 404px;
   position: relative;
   z-index: 1000;
   padding-top: 20px;
@@ -83,6 +92,18 @@ a.navbar-brand img {
   border-radius: 4px;
   padding: 20px;
   background-color: white
+}
+
+#section1Inner h2 {
+  color: rgba(0,0,0,0.5);
+}
+#section1Inner img {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
+box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
 }
 .sliding-middle-out {
 	display: inline-block;
@@ -101,17 +122,6 @@ a.navbar-brand img {
 .sliding-middle-out:hover:after {
 	width: 100%;
 	background: white;
-}
-#section1Inner h2 {
-  color: rgba(0,0,0,0.5);
-}
-#section1Inner img {
-  height: 180px;
-  width: 180px;
-  border-radius: 50%;
-  -webkit-box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
--moz-box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
-box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
 }
 #typing {
   color: white;
@@ -155,26 +165,6 @@ box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
   color: black;
   height: 30px;
 }
-#about {
-  margin-top: 100px;
-  padding-top: 200px;
-}
-#vision h4 {
-  font-size: xx-large;
-}
-#team {
-  margin-top: -10px;
-}
-#team h2 {
-  padding-bottom: 100px;
-}
-#team h3 {
-  padding-top: 50px;
-}
-#team img {
-  width: 200px;
-  height: 50px;
-}
 .sign {
   height: 50px;
   width: 230px;
@@ -197,28 +187,4 @@ box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
     to {
         background-position: 0 calc(85 * -84px);
     }
-}
-.us {
-  position: relative;
-  text-align: center;
-  background: #2196F3;
-  z-index: 1000;
-  height: 640px;
-}
-
-#vision {
-  margin-left: auto;
-  margin-right: auto;
-  width: 700px;
-}
-.us h2, .us h3 {
-  display: inline-block;
-  color: whitesmoke;
-}
-.us h2:after, .us h3:after {
-  border-bottom: solid 2px black;
-  content: "";
-  display: block;
-  width: 100px;
-  margin-left: 30px;
 }
