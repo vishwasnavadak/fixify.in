@@ -5,27 +5,32 @@
   <meta charset="utf-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" >
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="left"></div>
-<div id="right"></div>
-<div id="top"></div>
-<div id="bottom"></div>
-<nav class="navbar">
+<nav class="navbar navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#"><img src="img/fixify.png" alt="logo"></a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="login">LOGIN</a></li>
-      <li><a href="#">PARTNERS</a></li>
-      <li><a href="#">ABOUT US</a></li>
+    <ul class="nav navbar-nav navbar-right ">
+      <li><a href="login"><i class="fa fa-sign-in"></i>  LOGIN</a></li>
+      <li><a href="#"><i class="fa fa-group"></i>  PARTNERS</a></li>
+      <li><a href="#"><i class="fa fa-info"></i>  ABOUT US</a></li>
+      <div class=" pull-right navbar-form">
+                <div class="input-group hidden-search">
+                    <input type="text" class="form-control hidden-input" placeholder="Search" style="display:none;">
+                    <div class="input-group-btn">
+                        <button class="btn" id="search-button" onclick="searchClicked()"><i class="fa fa-search"></i>  SEARCH</button>
+                    </div>
+                </div>
+        </div>
     </ul>
   </div>
 </nav>
 <div id="heroWrapper">
-  <div class="top-gradient"></div>
   <div id="typing">
     <span id="caption"></span>
     <span id="cursor">|</span>
@@ -81,11 +86,20 @@
     </div>
   </div>
 </div>
+<div class="footer-copy" >
+		 <p>Copyright © 2016 Fixify India. All rights reserved </p>
+	</div>
 <form action="index.html" method="post">
   <input type="hidden" name="complaint">
 </form>
+
 <script src="js/jquery.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(".hidden-search").hover(function(){
+        $(".hidden-input").toggle("slow");
+    });
+</script>
 </body>
 </html>
