@@ -21,7 +21,7 @@
       <li><a href="#"><i class="fa fa-info"></i>  ABOUT US</a></li>
       <div class=" pull-right navbar-form">
                 <div class="input-group hidden-search">
-                    <input type="text" class="form-control hidden-input" placeholder="Search" style="display:none;">
+                    <input required type="text" class="form-control hidden-input" placeholder="Search" style="display:none;">
                     <div class="input-group-btn">
                         <button class="btn" id="search-button" onclick="searchClicked()"><i class="fa fa-search"></i>  SEARCH</button>
                     </div>
@@ -86,9 +86,7 @@
     </div>
   </div>
 </div>
-<div class="footer-copy" >
-		 <p>Copyright © 2016 Fixify India. All rights reserved </p>
-	</div>
+
 <form action="index.html" method="post">
   <input type="hidden" name="complaint">
 </form>
