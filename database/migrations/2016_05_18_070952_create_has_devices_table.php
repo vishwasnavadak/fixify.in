@@ -13,6 +13,7 @@ class CreateHasDevicesTable extends Migration
     public function up()
     {
         Schema::create('has_devices', function (Blueprint $table) {
+          $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('userId')->unsigned();
             $table->boolean('isLaptop');

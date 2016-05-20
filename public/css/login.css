@@ -81,6 +81,13 @@ body {
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     width: 100%;
 }
+span.input-group-addon {
+  border: 1px solid #999999;
+  border-radius: 0;
+}
+.err {
+  border: 1px solid red;
+}
 .container-login .checkbox {
     margin-top: -15px;
 }
@@ -98,4 +105,32 @@ body {
 .container-login button:focus {
     background: #de2f18;
     border-color: #be2815;
+}
+a.social {
+  text-align: center;
+  padding: 0;
+  display: flex;
+  border: none;
+
+  color: #7b7b7b;
+  background: #f2f2f2;
+}
+a.social i {
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  display: inline;
+  vertical-align: text-bottom;
+}
+a.social span {
+  flex: 1;
+  padding: 6px;
+}
+a.social.fb:hover {
+  background: #3B5998;
+  color: whitesmoke;
+}
+a.social.go:hover {
+  background: #C03121;
+  color: whitesmoke;
 }

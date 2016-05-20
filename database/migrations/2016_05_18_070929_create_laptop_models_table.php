@@ -13,6 +13,7 @@ class CreateLaptopModelsTable extends Migration
     public function up()
     {
         Schema::create('laptop_models', function (Blueprint $table) {
+          $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('brandId')->unsigned();
             $table->string('model', 64);

@@ -20,6 +20,9 @@ class IndexController extends Controller {
     ]);
   }
   public function me(Request $req) {
-    return $req->session()->get('user');
+    return view('profile')->with([
+      'title' => 'Profile',
+      'user' => $req->session()->get('user')
+    ]);
   }
 }

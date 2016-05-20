@@ -13,6 +13,7 @@ class CreateCredsTable extends Migration
     public function up()
     {
         Schema::create('creds', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('userId')->unsigned();
             $table->foreign('userId')->references('id')->on('users')->onDelete('cascade');

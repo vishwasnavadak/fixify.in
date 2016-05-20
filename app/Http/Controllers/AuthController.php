@@ -14,14 +14,28 @@ class AuthController extends Controller {
     $passwd = $req->get('passwd');
     $user = Users::where('email', $email)->first();
     if(empty($user))
-      return redirect()->back()->withErrors(['field'=>'e']);
-    if(!Hash::check($passwd, $user->passwd))
-      return redirect()->back()->withErrors(['field'=>'p']);
+      return redirect()->back()->withErrors(['field'=>'Email is not registered']);
+    $hash = $user->hasCred->passwd;
+    if(empty($hash))
+      return redirect()->back()->withErrors(['field'=>'Email is not registered']);
+    if(!Hash::check($passwd, $hash))
+      return redirect()->back()->withErrors(['field'=>'Email/Password combination is wrong.']);
     $req->session()->put('user', $user);
-    return redirect()->back();
+    return redirect()->route('profile');
   }
-  public function register() {
-
+  public function register(Request $req) {
+    $user = new Users;
+    $user->fName = $req->get('fName');
+    $user->email = $req->get('email');
+    if($req->has('lName'))
+      $user->lName = $req->get('lName');
+    if($req->has('phone'))
+      $user->phone = $req->get('phone');
+    $user->save();
+    $user->hasCred()->create([
+      'passwd' => Hash::make($req->get('passwd'))
+    ]);
+    return redirect('login')->withErrors(['field'=>'Please Login']);
   }
   public function socialRedirect($provider) {
     $providerKey = \Config::get('services.' . $provider);
@@ -30,27 +44,29 @@ class AuthController extends Controller {
     return Socialite::driver($provider)->redirect();
   }
   public function socialHandle($provider) {
-    $user = Socialite::driver($provider)->user();
-    $socialUser = null;
-    $sameSocialId = SocialLogins::where('socialId', '=', $user->id)->where('provider', '=', $provider)->first();
-    if(empty($sameSocialId)) {
-        $newSocialUser = new Users;
-        $newSocialUser->email = $user->email;
-        $name = explode(' ', $user->name);
-        $newSocialUser->fName = $name[0];
-        $newSocialUser->lName = $name[1];
-        $newSocialUser->save();
-
-        $socialData = new SocialLogins;
-        $socialData->socialId = $user->id;
-        $socialData->provider= $provider;
-        $newSocialUser->social()->save($socialData);
-
-        $socialUser = $newSocialUser;
+    $socialUser = Socialite::driver($provider)->user();
+    $user = null;
+    $sameUser = SocialLogins::where('socialId', $socialUser->id)->where('provider', $provider)->first();
+    if(empty($sameUser)) {
+        $name = explode(' ', $socialUser->name);
+        $newUser = Users::create([
+          'email' => $socialUser->email,
+          'fName' => $name[0],
+          'lName' => $name[1]
+        ]);
+        $newUser->hasSocial()->create([
+          'provider' => $provider,
+          'socialId' => $socialUser->id
+        ]);
+        $user = $newUser;
     }
     else
-        $socialUser = $sameSocialId->getUser;
-    Session::put('user', $socialUser->fName);
+        $user = $sameUser->getUser;
+    session(['user' => $user]);
     return redirect()->route('profile');
+  }
+  public function logout(Request $req) {
+    $req->session()->forget('user');
+    return redirect('login');
   }
 }

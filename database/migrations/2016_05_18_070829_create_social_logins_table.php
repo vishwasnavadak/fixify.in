@@ -13,6 +13,7 @@ class CreateSocialLoginsTable extends Migration
     public function up()
     {
         Schema::create('social_logins', function (Blueprint $table) {
+          $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('userId')->unsigned();
             $table->string('provider', 32);

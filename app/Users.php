@@ -7,11 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Users extends Model {
   protected $table = "users";
   protected $fillable = ['fName', 'lName', 'email', 'phone', 'address'];
-  protected $hidden = ['id'];
-  public function social() {
-    return $this->hasOne('App\SocialLogins');
+  public function hasSocial() {
+    return $this->hasOne('App\SocialLogins', 'userId');
   }
-  public function getPasswd() {
-    return $this->hasOne('App\Creds');
+  public function hasCred() {
+    return $this->hasOne('App\Creds', 'userId');
   }
 }

@@ -13,6 +13,7 @@ class CreateLaptopBrandsTable extends Migration
     public function up()
     {
         Schema::create('laptop_brands', function (Blueprint $table) {
+          $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name', 64);
             $table->timestamps();
