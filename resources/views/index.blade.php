@@ -119,7 +119,7 @@
     </div>
 </div>
 <div class="footer">
-    <p>
+    <p class="text-center">
         <i class="fa fa-copyright"></i> Fixify India 2016. All lefts reserved.
     </p>
 </div>

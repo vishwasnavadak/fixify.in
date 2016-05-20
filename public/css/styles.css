@@ -70,9 +70,15 @@ a.navbar-brand img {
   left: 0;
   transform: translate3d(0, 0, 10);
 }
-#services,#about,#howitworks,#whatweserve {
+#services,#howitworks {
   background-color: whitesmoke;
   width: 100%;
+  padding:20px 15px;
+}
+#about,#whatweserve {
+  background-color: #2196F3;
+  width: 100%;
+  padding:20px 15px;
 }
 .container-fluid {
     padding-left: 0;
@@ -170,6 +176,12 @@ box-shadow: 2px 4px 22px -2px rgba(0,0,0,0.75);
   width: 230px;
   margin-left: auto;
   margin-right: auto;
+}
+.footer {
+    padding:10px;
+}
+.footer p{
+  font-size: 15px;;
 }
 @-webkit-keyframes sign-anim {
     to {
