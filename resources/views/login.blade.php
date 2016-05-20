@@ -11,12 +11,12 @@
         </div>
       @endif
 			<ul id="top-bar" class="nav nav-tabs nav-justified">
-				<li class="active"><a href="#login">Login</a></li>
-				<li><a href="#register">Register</a></li>
+				<li class="active"><a href="#login">LOGIN</a></li>
+				<li><a href="#register">REGISTER</a></li>
 			</ul>
 			<div class="tab-content tabs-login col-lg-12 col-md-12 col-sm-12 cols-xs-12">
 				<div id="login" class="tab-pane fade active in">
-					<h2><i class="fa fa-sign-in"></i> Login to Fixify</h2>
+					<h3>Sign-in on Fixify</h3>
           <div class="row form-group">
             <div class="col-sm-6">
               <a href="social/redirect/facebook" class="btn form-control social fb">
@@ -31,13 +31,18 @@
               </a>
             </div>
           </div>
-          <center><h3>OR</h3></center>
-					<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="user/login">
+          <div class="or">
+            <hr>
+            <span>OR</span>
+          </div>
+					<form onSubmit="return validateLogin()" method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="user/login">
             {{ csrf_field() }}
-						<div class="form-group ">
-							<input type="text" class="form-control" name="email" placeholder="Email"/>
+            <div class="form-group input-group">
+							<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+								<input type="email" class="form-control" name="email" placeholder="Email">
 						</div>
-						<div class="form-group ">
+            <div class="form-group input-group">
+							<span class="input-group-addon"><i class="fa fa-key"></i></span>
 								<input type="password" class="form-control" name="passwd" placeholder="Password">
 						</div>
 						<div class="form-group ">
@@ -46,8 +51,7 @@
 					</form>
 				</div>
         <div id="register" class="tab-pane fade active in">
-<<<<<<< HEAD
-					<h2><i class="glyphicon glyphicon-log-in"></i> Register to Fixify</h2>
+					<h3>Sign-up on Fixify</h3>
 					<form method="post" onsubmit="return validate()" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="user/register">
             {{ csrf_field() }}
             <div class="form-group">
@@ -59,14 +63,6 @@
                   <input type="text" class="form-control" name="lName" placeholder="Second Name">
                 </div>
 							</div>
-=======
-					<h2><i class="fa fa-sign-in"></i> Register to Fixify</h2>
-					<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" action="user/register">
-						<div class="form-group ">
-							<label for="login" class="sr-only">Name</label>
-								<input type="text" class="form-control" name="login" id="login_value"
-									placeholder="Name" tabindex="1" value="" />
->>>>>>> a173ce4ffe4b7b84316d252004e4006fe4184841
 						</div>
 						<div class="input-group form-group">
 							<span class="input-group-addon"><i class="fa fa-phone"></i></span>
@@ -84,7 +80,10 @@
 							<span class="input-group-addon"><i class="fa fa-key"></i></span>
 								<input type="password" class="form-control req" name="passwd2" placeholder="Re-enter Password">
 						</div>
-            <center><h3>---------- OR ----------</h3></center>
+            <div class="or">
+              <hr>
+              <span>OR</span>
+            </div>
             <div class="row form-group">
               <div class="col-sm-6">
                 <a href="#" class="btn btn-primary form-control social">
