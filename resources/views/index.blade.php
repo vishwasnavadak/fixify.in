@@ -6,6 +6,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css" >
+  <link rel="stylesheet" href="css/animate.css" >
   <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -37,8 +38,9 @@
     <span id="cursor">|</span>
   </div>
   <div id="search">
-    <input type="text" class="form-control" placeholder="Let us know your problem..">
-    <button class="btn btn-lg" onclick="searchClicked()">Submit</button>
+    <input type="text" class="form-control" placeholder="Let us know your problem.." autocomplete="off" onkeyup="autocompletesearch(this.value)"/>
+    <button class="btn btn-lg" onclick="searchClicked()">Submit</button><br/>
+    <div class="suggestions" id="suggestions"></div>
   </div>
   <div id="heroInner" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
@@ -55,27 +57,27 @@
   </div>
 </div>
 <div  class="container-fluid">
-    <div id="services">
+    <div id="services" class="wow bounceIn" data-wow-duration="500ms" data-wow-delay="300ms">
   <div id="section1Inner" >
       <div class="col-sm-12">
           <h1 class="section-header text-center">Why Fixify ?<hr width="35%"/></h1>
       </div>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-4 wow tada" data-wow-duration="500ms" data-wow-delay="600ms">
         <div class="innerWrapper">
           <img src="img/bulb.png" alt="innovation" >
           <h2>INNOVATION</h2>
           <p>We see the world differently. We aim higher, dream bigger and explore further. We try to make everything 10x better than anything ever done before.</p>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 wow tada" data-wow-duration="500ms" data-wow-delay="600ms">
         <div class="innerWrapper">
           <img src="img/growth.png" alt="growth" >
           <h2>GROWTH</h2>
           <p>We solve problems differently. We combine knowledge, passion and technology to drive innovation and set new benchmarks for excellence.</p>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 wow tada" data-wow-duration="500ms" data-wow-delay="600ms">
         <div class="innerWrapper">
           <img src="img/online.png" alt="online" >
           <h2>TECHNOLOGY</h2>
@@ -85,7 +87,7 @@
     </div>
   </div>
 </div>
-<div id="about" >
+<div id="about" class="wow bounceInRight" data-wow-duration="500ms" data-wow-delay="300ms">
   <div id="section1Inner">
       <div class="col-sm-12">
           <h1 class="section-header text-center">About Us<hr width="35%" color=""/></h1>
@@ -97,17 +99,17 @@
     </div>
   </div>
 </div>
-<div id="howitworks" >
+<div id="howitworks" class="wow bounceInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
   <div id="section1Inner">
       <div class="col-sm-12">
           <h1 class="section-header text-center">How it works ?<hr width="35%"/></h1>
       </div>
     <div class="row">
-     lkihgvirinurvpiurhiguhrpgihrviuhirrg
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis vestibulum nisi. In diam libero, efficitur non interdum vel, aliquam eu ex. Duis eget egestas augue. Cras eleifend libero vel fermentum sagittis. Vestibulum vel viverra lorem. Quisque sit amet risus quis tellus aliquet viverra.
     </div>
   </div>
 </div>
-<div id="whatweserve" >
+<div id="whatweserve" class="wow bounceInRight" data-wow-duration="500ms" data-wow-delay="300ms">
       <div class="col-sm-12">
           <h1 class="section-header text-center">What we service ?<hr width="35%"/></h1>
       </div>
@@ -133,6 +135,10 @@
 <script src="js/jquery.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+             new WOW().init();
+</script>
 <script type="text/javascript">
     $(".hidden-search").hover(function(){
         $(".hidden-input").toggle("slow");
