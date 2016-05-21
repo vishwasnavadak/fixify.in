@@ -9,6 +9,11 @@ class IndexController extends Controller {
       'issues' => Issues::all()
     ]);
   }
+  public function autocomplete() {
+    return view('autocomplete')->with([
+      'issues' => Issues::all()
+    ]);
+  }
   public function login() {
     return view('login')->with('title', 'Login');
   }

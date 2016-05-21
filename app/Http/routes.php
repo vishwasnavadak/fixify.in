@@ -13,6 +13,7 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('login', 'IndexController@login');
+Route::get('search/autocomplete', 'IndexController@autocomplete');
 Route::post('user/login', 'AuthController@login');
 Route::post('user/register', 'AuthController@register');
 Route::get('complaint', 'IndexController@complaint')->middleware('login');
